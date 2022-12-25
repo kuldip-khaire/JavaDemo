@@ -1,5 +1,6 @@
 package com.velocity.demo;
 
+import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -13,6 +14,9 @@ public class FunctionalInterface {
 		
 		BiFunction<Integer, Integer, Integer> multiplyMe = (i,j) -> (i*j);
 		System.out.println(multiplyMe.apply(10, 20));
+		
+		BiConsumer<Integer, Integer> divideMe = (i,j) -> System.out.println(i/j);
+		divideMe.accept(20, 5);
 
 	}
 
