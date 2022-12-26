@@ -17,7 +17,9 @@ public class FunctionalInterface {
 		
 		BiConsumer<Integer, Integer> divideMe = (i,j) -> System.out.println(i/j);
 		divideMe.accept(20, 5);
-
+		
+		BiFunction<Integer, Integer, Integer> divideMe2 = (i,j) -> (i/j);
+		System.out.println(divideMe2.apply(40, 20));
 	}
 
 }
